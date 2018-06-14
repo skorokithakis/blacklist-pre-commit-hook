@@ -26,7 +26,7 @@ class ASTVisitor(ast.NodeVisitor):
         elif hasattr(func, "id"):
             name = func.id
         else:
-            continue
+            return
 
         if name in self.blacklisted_names and b"noqa" not in self.source_lines[node.lineno - 1]:
             self.infractions.append(Infraction(name, node.lineno, node.col_offset))

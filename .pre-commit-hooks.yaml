@@ -1,5 +1,5 @@
 -   id: blacklist
-    name: Function blacklist
+    name: Blacklist
     description: "Blacklist certain functions like eval() so they don't get added to the source."
     entry: blacklist
     language: python
