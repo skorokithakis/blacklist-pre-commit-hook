@@ -34,7 +34,7 @@ class ASTVisitor(ast.NodeVisitor):
 def check_file_for_infractions(filename, blacklisted_names, ignore=None):
     for name in ignore:
         if name in filename:
-            return
+            return []
 
     source = open(filename, "rb").read()
     tree = ast.parse(source, filename=filename)
