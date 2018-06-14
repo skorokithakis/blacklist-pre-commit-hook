@@ -1,0 +1,10 @@
+-   id: blacklist
+    name: Function blacklist
+    description: "Blacklist certain functions like eval() so they don't get added to the source."
+    entry: blacklist
+    language: python
+    types: [python]
+    args: []
+    # for backward compatibility
+    files: ''
+    minimum_pre_commit_version: 0.15.0
