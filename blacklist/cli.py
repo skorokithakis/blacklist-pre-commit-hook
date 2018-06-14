@@ -61,11 +61,9 @@ def parse_args(argv):
 
 def main(argv=None):
     args = parse_args(argv)
-    print(args)
-    blacklisted_names = args.blacklisted_names.split(",")
     rc = 0
     for filename in args.filenames:
-        calls = check_file_for_infractions(filename, blacklisted_names, ignore=args.ignore)
+        calls = check_file_for_infractions(filename, args.blacklisted_names, ignore=args.ignore)
         if calls:
             rc = rc or 1
         for call in calls:
