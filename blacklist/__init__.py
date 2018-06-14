@@ -43,7 +43,7 @@ def parse_args(argv):
         return set(value.split(","))
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("filenames", nargs="*")
+    parser.add_argument("filenames", nargs="+")
     parser.add_argument("--ignore", type=parse_ignore, default=set())
     parser.add_argument("-b", "--blacklisted-names", default="eval")
 
