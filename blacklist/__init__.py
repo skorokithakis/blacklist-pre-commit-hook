@@ -18,7 +18,7 @@ class ASTVisitor(ast.NodeVisitor):
         self.ignore = set(ignore) if ignore else set()
 
     def visit_Call(self, node):
-        super(self, visit_Call).generic_visit(node)
+        super(ASTVisitor, self).generic_visit(node)
         func = node.func
 
         if hasattr(func, "attr"):
